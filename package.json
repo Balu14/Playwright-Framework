@@ -1,10 +1,31 @@
 {
+  "name": "saucedemo-e2e",
+  "version": "1.0.0",
+  "description": "Playwright test suite for SauceDemo application",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:chromium": "playwright test --project=chromium",
+    "show:report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "e2e",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "playwright": "^1.59.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
-    "@types/node": "^25.5.2"
-  },
-  "scripts": {}
+    "@types/node": "^25.5.2",
+    "typescript": "^5.3.3",
+    "prettier": "^3.1.0",
+    "eslint": "^8.54.0"
+  }
 }
