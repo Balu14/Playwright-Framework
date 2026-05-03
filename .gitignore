@@ -2,6 +2,15 @@
 playwright-report/
 test-results/
 .auth/
+allure-results/
+allure-report/
+
+# Logs
+logs/
+
+# Visual Regression
+visual-baselines/
+visual-diffs/
 
 # Node modules
 node_modules/

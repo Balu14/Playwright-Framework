@@ -8,7 +8,17 @@
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
     "test:chromium": "playwright test --project=chromium",
-    "show:report": "playwright show-report"
+    "test:dev": "cross-env ENV=dev playwright test",
+    "test:qa": "cross-env ENV=qa playwright test",
+    "test:staging": "cross-env ENV=staging playwright test",
+    "test:prod": "cross-env ENV=prod playwright test",
+    "test:smoke": "playwright test --grep \"@smoke\"",
+    "test:regression": "playwright test --grep \"@regression\"",
+    "test:accessibility": "playwright test --grep \"@accessibility\"",
+    "test:visual": "playwright test --grep \"@visual\"",
+    "show:report": "playwright show-report",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-results"
   },
   "keywords": [
     "playwright",
@@ -19,13 +29,22 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "playwright": "^1.59.1"
+    "@axe-core/playwright": "^4.11.3",
+    "@faker-js/faker": "^10.4.0",
+    "allure-playwright": "^3.7.1",
+    "dotenv": "^17.4.2",
+    "faker": "^6.6.6",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.59.1",
+    "pngjs": "^7.0.0",
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.5.2",
-    "typescript": "^5.3.3",
+    "cross-env": "^10.1.0",
+    "eslint": "^8.54.0",
     "prettier": "^3.1.0",
-    "eslint": "^8.54.0"
+    "typescript": "^5.3.3"
   }
 }
